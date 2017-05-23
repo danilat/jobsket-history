@@ -1,0 +1,184 @@
+.gorilas {
+    position:relative;
+}
+
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'cooper_hewittbook';
+    src: url('../../fonts/cooperhewitt-book-webfont.eot');
+    src: url('../../fonts/cooperhewitt-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/cooperhewitt-book-webfont.woff2') format('woff2'),
+         url('../../fonts/cooperhewitt-book-webfont.woff') format('woff'),
+         url('../../fonts/cooperhewitt-book-webfont.ttf') format('truetype'),
+         url('../../fonts/cooperhewitt-book-webfont.svg#cooper_hewittbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'cooper_hewittbook';
+    src: url('../../fonts/cooperhewitt-bookitalic-webfont.eot');
+    src: url('../../fonts/cooperhewitt-bookitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/cooperhewitt-bookitalic-webfont.woff2') format('woff2'),
+         url('../../fonts/cooperhewitt-bookitalic-webfont.woff') format('woff'),
+         url('../../fonts/cooperhewitt-bookitalic-webfont.ttf') format('truetype'),
+         url('../../fonts/cooperhewitt-bookitalic-webfont.svg#cooper_hewittbook_italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'cooper_hewittbook';
+    src: url('../../fonts/cooperhewitt-medium-webfont.eot');
+    src: url('../../fonts/cooperhewitt-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/cooperhewitt-medium-webfont.woff2') format('woff2'),
+         url('../../fonts/cooperhewitt-medium-webfont.woff') format('woff'),
+         url('../../fonts/cooperhewitt-medium-webfont.ttf') format('truetype'),
+         url('../../fonts/cooperhewitt-medium-webfont.svg#cooper_hewittmedium') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'oswaldbold';
+    src: url('../../fonts/oswald-bold-webfont.eot');
+    src: url('../../fonts/oswald-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/oswald-bold-webfont.woff2') format('woff2'),
+         url('../../fonts/oswald-bold-webfont.woff') format('woff'),
+         url('../../fonts/oswald-bold-webfont.ttf') format('truetype'),
+         url('../../fonts/oswald-bold-webfont.svg#oswaldbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'oswaldbold';
+    src: url('../../fonts/oswald-bolditalic-webfont.eot');
+    src: url('../../fonts/oswald-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/oswald-bolditalic-webfont.woff2') format('woff2'),
+         url('../../fonts/oswald-bolditalic-webfont.woff') format('woff'),
+         url('../../fonts/oswald-bolditalic-webfont.ttf') format('truetype'),
+         url('../../fonts/oswald-bolditalic-webfont.svg#oswaldbold') format('svg');
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+
+
+
+// Colors
+$bg-color:              #FFF;
+$text-color:            #1C1C1C;
+$accent-color:          #BD1622;
+$bg-intro-color:        #E8E5D9;
+$grey:                  #BBBBBB;
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: "Cooper Hewitt Book", "cooper_hewittbook", Helvetica, Arial, sans-serif;
+$mainColor: $text-color;
+$headingFont: "oswaldbold", Helvetica, Arial, sans-serif;
+$headingColor: $accent-color;
+$headingTextShadow: none;
+$headingTextTransform: uppercase;
+$backgroundColor: $bg-color;
+$linkColor: $accent-color;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+
+// Custom settings
+
+// Primary/body text
+$mainFontSize: 36px;
+
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingTextShadow: none;
+$headingFontWeight: 700;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 3.77em;
+$heading2Size: 2.11em;
+$heading3Size: 1.55em;
+$heading4Size: 1.00em;
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Custom elements and tweaks
+.logo {
+    position: absolute;
+    left:1rem;
+    top:2rem;
+    width:6rem;
+    img {
+        width: 100%;
+        height: auto;
+        opacity: 0.3;
+    }
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    em {
+        text-decoration: underline;
+    }
+}
+
+.reveal section img {
+    border: none;
+    box-shadow: none;
+}
+
+
